@@ -1,0 +1,56 @@
+get http://localhost:4000/todos/?status=TO%20DO
+###
+
+get http://localhost:4000/todos/?priority=HIGH
+###
+
+get http://localhost:4000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+get http://localhost:4000/todos?search_q=Buy
+###
+
+get http://localhost:4000/todos/?category=WORK&status=DONE
+###
+
+get http://localhost:4000/todos/?category=HOME
+###
+
+get http://localhost:4000/todos/?category=LEARNING&priority=HIGH
+###
+
+get http://localhost:4000/todos/7/
+###
+
+get http://localhost:4000/agenda/?date=2021-12-12
+###
+
+post http://localhost:4000/todos/
+Content-Type: application/json
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+###
+
+put http://localhost:4000/todos/7/?status=DONE
+###
+
+put http://localhost:4000/todos/6/?priority=HIGH
+###
+
+put http://localhost:4000/todos/7/?todo=Clean%20the%20garden
+###
+
+put http://localhost:4000/todos/2/?category=LEARNING
+###
+
+PUT http://localhost:4000/todos/2/?dueDate=2021-01-12
+###
+
+delete http://localhost:4000/todos/6/

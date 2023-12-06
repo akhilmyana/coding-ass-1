@@ -121,7 +121,7 @@ app.get("/todos/", async (request, response) => {
         }
       } else {
         response.status(400);
-        response.send("Invalid Todo Category");
+        response.send("Invalid Todo Priority");
       }
       break;
 
@@ -189,7 +189,7 @@ app.get("/todos/", async (request, response) => {
         response.send(data.map((eachItem) => outputResult(eachItem)));
       } else {
         response.status(400);
-        response.send("Invalid Todo Status");
+        response.send("Invalid Todo Category");
       }
       break;
 
@@ -281,7 +281,7 @@ app.put("/todos/:todoId/", async (request, response) => {
                 status = '${status}',
                 priority = '${priority}',
                 category = '${category}',
-                due_date = '${dueDate}',
+                due_date = '${dueDate}'
                 WHERE
                 id = ${todoId}`;
 
@@ -301,7 +301,7 @@ app.put("/todos/:todoId/", async (request, response) => {
                     status = '${status}',
                     priority = '${priority}',
                     category = '${category}',
-                    due_date = '${dueDate}',
+                    due_date = '${dueDate}'
                 WHERE
                     id = ${todoId}`;
 
@@ -320,7 +320,7 @@ app.put("/todos/:todoId/", async (request, response) => {
             priority = "${priority}",
             status = '${status},
             category = '${category}',
-            due_date = '${dueDate}',
+            due_date = '${dueDate}'
           WHERE
             id = ${todoId}`;
 
@@ -340,7 +340,7 @@ app.put("/todos/:todoId/", async (request, response) => {
                 status = '${status}',
                 priority = '${priority}',
                 category = '${category}',
-                due_date = '${dueDate}',
+                due_date = '${dueDate}'
                 WHERE
                 id = ${todoId}`;
 
@@ -361,7 +361,7 @@ app.put("/todos/:todoId/", async (request, response) => {
                 status = '${status}',
                 priority = '${priority}',
                 category = '${category}',
-                due_date = '${dueDate}',
+                due_date = '${dueDate}'
                 WHERE
                 id = ${todoId}`;
 

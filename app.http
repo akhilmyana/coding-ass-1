@@ -7,7 +7,7 @@ get http://localhost:4000/todos/?priority=HIGH
 get http://localhost:4000/todos/?priority=HIGH&status=IN%20PROGRESS
 ###
 
-get http://localhost:4000/todos?search_q=Buy
+get http://localhost:4000/todos/?search_q=Buy
 ###
 
 get http://localhost:4000/todos/?category=WORK&status=DONE
@@ -19,7 +19,7 @@ get http://localhost:4000/todos/?category=HOME
 get http://localhost:4000/todos/?category=LEARNING&priority=HIGH
 ###
 
-get http://localhost:4000/todos/7/
+get http://localhost:4000/todos/6/
 ###
 
 get http://localhost:4000/agenda/?date=2021-12-12
@@ -38,13 +38,13 @@ Content-Type: application/json
 }
 ###
 
-put http://localhost:4000/todos/7/?status=DONE
+put http://localhost:4000/todos/6/?status=DONE
 ###
 
 put http://localhost:4000/todos/6/?priority=HIGH
 ###
 
-put http://localhost:4000/todos/7/?todo=Clean%20the%20garden
+put http://localhost:4000/todos/6/?todo=Clean%20the%20garden
 ###
 
 put http://localhost:4000/todos/2/?category=LEARNING
